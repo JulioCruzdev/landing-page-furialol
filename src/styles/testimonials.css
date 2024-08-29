@@ -1,4 +1,17 @@
 /* PRODUCTS */
+
+#testimonials {
+    background-image: url(../images/fundobranco.avif);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-size: cover;
+
+}
+
+
 .product {
     position: relative;
     overflow: hidden;

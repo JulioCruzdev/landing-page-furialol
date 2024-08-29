@@ -1,8 +1,14 @@
 #home {
-    display: inline-block;
-    min-height: calc(100vh - 91px);
-    position: relative;
-    vertical-align: top;
+    background-image: url(../images/background3.png);
+
+
+    background-repeat: no-repeat;
+    background-position: absolute;
+    background-color: #fff;
+    min-height: 100%;
+    width: 100%;
+    background-size: cover;
+    justify-content: center;
 }
 
 * {
@@ -12,13 +18,23 @@
     box-sizing: border-box;
 }
 
-#container {
+#cards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 32px;
 
+}
+
+
+
+.team {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-
 }
 
 .card {
@@ -44,6 +60,13 @@
     border: 20px solid transparent;
     border-top: 20px solid #daa520;
     border-right: 20px solid #daa520;
+}
+
+.role {
+    width: 40px;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -94,7 +117,7 @@
 }
 
 /** Read More/Less Button **/
-#read_button {
+.read_button {
     border: none;
     padding: 10px;
     border-radius: 2px;
@@ -107,7 +130,7 @@
     transition: all 0.2s ease-in-out;
 }
 
-#read_button:hover {
+.read_button:hover {
     background-color: transparent;
     color: #daa520;
     transition: all 0.2s ease-in-out;
@@ -127,6 +150,7 @@
 
 .description {
     color: #000000;
+    margin-bottom: 32px;
 }
 
 .tag {
@@ -177,7 +201,7 @@ p {
 
 #cta_buttons a {
     text-decoration: none;
-    color: #ffd700;
+    color: #daa520;
     background-color: #3f3f3f;
 }
 
@@ -194,4 +218,33 @@ p {
 
 #phone_button button {
     box-shadow: none;
+}
+
+@media screen and (max-width: 1170px) {
+    #cards {
+
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
+
+        display: flex;
+    }
+
+    .card {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+
+
+    }
+
+    #home .section-subtitle {
+        text-align: center;
+    }
 }

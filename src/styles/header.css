@@ -1,20 +1,62 @@
 header {
     width: 100%;
     padding: 28px 8%;
-    position: sticky;
+    position: flex;
     top: 0;
     background-color: #000000;
     z-index: 3;
 }
 
-#social-media-buttons {
+#social-media-buttons1 {
     display: flex;
     justify-content: right;
     align-items: right;
     padding: 0px 8% 0px 0px;
     width: 100%;
     gap: 10px;
+    color: #daa520;
+
+
+
 }
+
+.fa-tiktok {
+
+    color: #daa520;
+
+}
+
+.fa-youtube {
+
+    color: #daa520;
+
+}
+
+.fa-twitch {
+
+    color: #daa520;
+
+}
+
+.fa-instagram {
+
+    color: #daa520;
+
+}
+
+.fa-facebook {
+
+    color: #daa520;
+
+}
+
+.fa-twitter {
+
+    color: #daa520;
+
+}
+
+
 
 
 
@@ -33,6 +75,8 @@ header {
 
 #nav_list {
     display: flex;
+    justify-content: center;
+    font-weight: bold;
 
     list-style: none;
     gap: 48px;
@@ -60,10 +104,7 @@ header {
 
 @media screen and (max-width: 1170px) {
 
-    #nav_list,
-    #navbar .btn-default {
-        display: none;
-    }
+
 
     #mobile_btn {
         display: block;
@@ -87,7 +128,7 @@ header {
     }
 
     #mobile_nav_list .nav-item {
-        list-style: none;
+
         text-align: center;
     }
 }

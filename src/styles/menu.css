@@ -1,127 +1,77 @@
 #menu {
+    background-image: url(../images/fundo\ preto.jpg);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    background-size: cover;
 }
 
 .video-thumbnail {
     position: relative;
     display: flex;
-    width: 300px;
+    width: 400px;
     /* Ajuste o tamanho conforme necessário */
-    height: 500px;
+    height: 225px;
     /* Ajuste o tamanho conforme necessário */
 }
 
 .section-subtitle {
     color: #daa520;
     font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+
+
 }
 
 
 
 .subtitulo {
     color: #ffffff;
+    margin-bottom: 50px;
+    text-align: center;
 }
 
-.video-thumbnail img {
+#videos {
     width: 100%;
-    height: 300px;
-    display: flex;
-    cursor: pointer;
-}
-
-.video-thumbnail1 img {
-    width: 300px;
-    height: 75%;
-    display: flex;
-    cursor: pointer;
-}
-
-.video-thumbnail2 img {
-    width: 400px;
-    height: 90%;
-    display: flex;
-    cursor: pointer;
-}
-
-.video-thumbnail3 img {
-    width: 400px;
     height: 100%;
-    display: flex;
-    cursor: pointer;
-}
-
-
-
-#dishes {
-    width: 100%;
     display: flex;
     justify-content: center;
     gap: 24px;
     margin-top: 32px;
 }
 
-.dish {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 20px;
-    gap: 18px;
-    width: 25%;
-    padding: 20px;
-    background-color: var(--color-neutral-0);
-    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-}
-
-.dish-heart {
-    position: absolute;
-    background-color: var(--color-primary-6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.563rem;
-    color: var(--color-primary-1);
-    width: 70px;
-    height: 70px;
-    right: -10px;
-    top: -10px;
-    border-radius: 0px 37.5px 0px 42.5px;
-}
-
-.dish-description {
-    color: #434343;
-    text-align: center;
-}
-
-.dish-rate i {
-    color: var(--color-primary-6);
-}
-
-.dish-price {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
 @media screen and (max-width: 1170px) {
-    #dishes {
+    #videos {
         flex-wrap: wrap;
         justify-content: center;
+        flex-direction: row;
+        display: flex;
     }
 
-    .dish {
-        width: calc(50% - 12px);
-    }
+}
+
+.player {
+    aspect-ratio: 16/9;
+    width: 100%;
+
+}
+
+.video-thumbnail {
+    width: 100%;
+
+
+
 }
 
 @media screen and (max-width: 600px) {
-    .dish {
+    .video-thumbnail {
         width: 100%;
+        flex-direction: column;
+        display: flex;
+
     }
 
     #menu .section-subtitle {

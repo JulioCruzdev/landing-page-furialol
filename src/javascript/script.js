@@ -59,26 +59,34 @@ $(document).ready(function () {
     })
 });
 // Select button
-var button = document.getElementById('read_button')
+const buttons = document.querySelectorAll('.read_button')
 
 
-// Click Event
-button.addEventListener('click', function () {
-    // Select card
-    var card = document.querySelector('.card');
+buttons.forEach((button, i) => {
+    button.addEventListener('click', function () {
+        // Select card
+        var card = button.parentElement;
 
 
-    // Add/Remove Class Active
-    card.classList.toggle('active');
+        // Add/Remove Class Active
+        card.classList.toggle('active');
 
-    if (card.classList.contains('active')) {
-        // Change button text if has class active
-        return button.textContent = 'Read less';
-    }
+        if (card.classList.contains('active')) {
+            // Change button text if has class active
+            return button.textContent = 'Leia Menos';
+        }
 
-    // Change button text if hasn't class active
-    button.textContent = 'Read more';
-});
+        // Change button text if hasn't class active
+        button.textContent = 'Leia Mais';
+    });
+})
+
+
+
+
+
+
+
 const productContainers = [...document.querySelectorAll('.product-container')];
 const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
 const preBtn = [...document.querySelectorAll('.pre-btn')];
@@ -95,3 +103,4 @@ productContainers.forEach((item, i) => {
         item.scrollLeft -= containerWidth;
     })
 })
+
